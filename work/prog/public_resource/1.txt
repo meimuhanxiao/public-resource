@@ -1,0 +1,23 @@
+ping线程10s  ping一次服务器，如果服务器在线 server_status_ok = true; 不在线
+server_status_ok = false,reconnect_server = true;
+下次如果服务器在线需要重连服务器
+
+如果服务器不在线时来了实时数据
+datato_server线程把来的数据写到nosendto_server_event文本里
+并将have_event_noto_server = true;
+当ping通 服务器在线时ping线程把这文本里的数据发给服务器
+
+can接收到了实时数据 把事件序号 时间写到相应字节   还有个线程ping设备网络
+如果Ping不通 记录事件上报事件包括事件序号 时间等 还得存入数据库
+echo 输出自带换行  -n 不带换行  用vi 打开文本 保存后自动加换行
+getline 循环读 读到没有数据返回-1 已经读到文件末尾继续用getline函数 返回-1 line
+里存放最后一次line数据
+getline 读取一行数据放到 char *line 里 line
+
+结尾是\n,atoi(line)可以输出相应的整数
+can_rcv_pthread  pthread_ping_device  pthread_query_showdata 用到了 ~/www/下的文件
+cgi 中的 dev_set.c 用到了public_res/fault/下的文件
+如果public_res换路径了那里要改
+
+启线程read socket main线程 write 数据后 如果调用read
+是读不到返回数据的，阻塞在那里，返回数据被线程read走了
