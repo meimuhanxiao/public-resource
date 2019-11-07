@@ -1,0 +1,37 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFTYPE	v4l2-jpeg.c	/^}BUFTYPE;$/;"	t	typeref:struct:__anon1	file:
+CLEAR	V4L2.c	19;"	d	file:
+FILE_VIDEO	v4l2-jpeg.c	19;"	d	file:
+JPG	v4l2-jpeg.c	20;"	d	file:
+buffer	V4L2.c	/^struct buffer {$/;"	s	file:
+buffers	V4L2.c	/^struct buffer * buffers = NULL;$/;"	v	typeref:struct:buffer
+close_camera_device	v4l2-jpeg.c	/^void close_camera_device(int fd)$/;"	f
+dev_name	V4L2.c	/^static char * dev_name = "\/dev\/video2";\/\/摄像头设备名$/;"	v	file:
+fd	V4L2.c	/^static int fd = -1;$/;"	v	file:
+file_fd	V4L2.c	/^FILE *file_fd;$/;"	v
+file_length	V4L2.c	/^static unsigned long file_length;$/;"	v	file:
+file_name	V4L2.c	/^static unsigned char *file_name;$/;"	v	file:
+init_camera	v4l2-jpeg.c	/^int init_camera(int fd)$/;"	f
+init_mmap	v4l2-jpeg.c	/^int init_mmap(int fd)$/;"	f
+length	V4L2.c	/^        size_t length;$/;"	m	struct:buffer	file:
+length	v4l2-jpeg.c	/^	size_t length;$/;"	m	struct:__anon1	file:
+main	V4L2.c	/^int main (int argc,char ** argv)$/;"	f
+main	v4l2-1.c	/^int main(int argc, char **argv)$/;"	f
+main	v4l2-jpeg.c	/^void main(void)$/;"	f
+mainloop	v4l2-jpeg.c	/^int mainloop(int fd)$/;"	f
+n_buffer	v4l2-jpeg.c	/^static unsigned int n_buffer = 0;$/;"	v	file:
+n_buffers	V4L2.c	/^static unsigned int n_buffers = 0;$/;"	v	file:
+open_camera	v4l2-jpeg.c	/^int open_camera(void)$/;"	f
+process_image	v4l2-jpeg.c	/^int process_image(void *addr, int length)$/;"	f
+read_frame	V4L2.c	/^static int read_frame (void)$/;"	f	file:
+read_frame	v4l2-jpeg.c	/^int read_frame(int fd)$/;"	f
+start	V4L2.c	/^        void * start;$/;"	m	struct:buffer	file:
+start	v4l2-jpeg.c	/^    void *start;$/;"	m	struct:__anon1	file:
+start_capture	v4l2-jpeg.c	/^int start_capture(int fd)$/;"	f
+stop_capture	v4l2-jpeg.c	/^void stop_capture(int fd)$/;"	f
+usr_buf	v4l2-jpeg.c	/^BUFTYPE *usr_buf = NULL;$/;"	v

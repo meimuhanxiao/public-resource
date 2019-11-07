@@ -1,0 +1,3 @@
+open /dev/video2 权限要RDWR，不要是RD0NLY，
+如果是RD0NLY 在mmap映射时会报invalid argument
+如果是RD0NLY 当mmap 时添 PROT_READ | PROT_WRITE 会显示没有权限
