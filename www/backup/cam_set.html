@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>外接设备设置与查询</title>
+	</head>
+	<body > 
+		<FORM action="cgi-bin/cam_set.cgi" method="post" >
+			<h4>相机数量:&nbsp&nbsp&nbsp<input type="text"name="cam_num" size="15" value=""
+	onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"
+	 maxlength="2" autofocus/></h4><p></p><br>
+
+			<h4>相机ip地址: <textarea  name="cam_ip"
+			style="width:260px; height:50px;" 
+	onkeyup="this.value=value.replace(/[^\d|.|,]/g,'');if(this.value=='')(this.value='');"
+ placeholder="多个ip地址用英文的,分隔"> </textarea></h4>
+             多个ip地址用英文的,分隔<br>
+
+            <h4>相机id:&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp<textarea name="cam_id"
+			style="width:260px; height:20px;"
+		  onkeyup="this.value=value.replace(/[^\d|.|,]/g,'');if(this.value=='')(this.value='');"
+	placeholder="多个相机id用英文的,分隔"> </textarea></h4>
+ 			多个相机id用英文的,分隔,只填写id数字<br>
+
+            <h4>相机描述:&nbsp&nbsp&nbsp<textarea type="text"name="cam_des"size="15" value =""
+            style="width:260px; height:50px;">
+             </textarea></h4><p></p><br>
+
+			<INPUT type="SUBMIT" value="设置">	
+		</FORM><br>
+		<a href="./cgi-bin/cam_query.cgi">已有相机信息查询</a>
+	</body>
+	<html>

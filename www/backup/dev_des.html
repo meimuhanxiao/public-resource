@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head> 
+	  <meta charset="UTF-8">
+	  <title>设备设置与查询 </title>
+	  <style>
+        a{ text-decoration:none}
+      </style>                 
+<script> 
+    function test(x){
+			  document.getElementById(x).style.background="#EBD3E8";
+		     
+			  for(var i = 1;i<8;i++){
+			   if (i != x)
+                    document.getElementById(i).style.background=" ";
+			  }
+    }
+
+  function func()        
+ {
+    document.getElementById(1).style.background="#EBD3E8";
+ }
+   
+ </script>
+ </head>
+	  <body onload="func()"   style="margin:0"  >
+	  <table style="width:100%;height:200px;">
+		  <tr style="height:50px;">
+			  <td style="width:25%;"><a href="cam_set.html" id="1" onclick="test(1)" target="dev_frame">
+					  相机设置与查询</a>
+
+			  <td style="width:25%;"><a href="ter_ser.html" id="2" onclick="test(2)" target="dev_frame">
+					  终端服务器设置与查询</a>
+
+			  <td style="width:25%;"><a href="sup_light.html" id="3" onclick="test(3)" target="dev_frame">
+					  补光灯设置与查询</a>
+
+			  <td style="width:25%;"><a href="sig_light.html" id="4" onclick="test(4)" target="dev_frame">
+					  信号灯设置与查询</a>
+		  </tr>				
+		  <tr style="height:50px;">
+			  <td style="width:25%;"><a href="traf_induce.html" id="5"onclick="test(5)" target="dev_frame">
+					  交通诱导设置与查询</a>
+
+
+			  <td style="width:25%;"><a href="ter_ser.html" id="2" onclick="test(2)" target="dev_frame">
+					  终端服务器设置与查询</a>
+
+			  <td style="width:25%;"><a href="sup_light.html" id="3" onclick="test(3)" target="dev_frame">
+					  补光灯设置与查询</a>
+
+			  <td style="width:25%;"><a href="sig_light.html" id="4" onclick="test(4)" target="dev_frame">
+					  信号灯设置与查询</a>
+		  </tr>	
+         </table>
+		
+		 <table style="width:100%;height:500px;">
+			 <tr style="width:100%;height:500px;">
+				 <td >
+					 <iframe src="cam_set.html" style="width:100%;height:500px;"
+								 frameborder=0  align="center" name="dev_frame" ></iframe>
+				 </td>
+
+			 </tr>
+
+		 </table>
+  </body>
+
+  </html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>设备设置与查询</title>
+	</head>
+	<body>
+		<h3>设备设置与查询</h3><p></p>
+		<FORM action="cgi-bin/dev_set.cgi" method="post">
+			<h4>设备数量: <input type="text" name="dev_num"	onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"
+	 maxlength="2" autofocus/>(如有10个设备就写10)</h4> 			
+				<INPUT type="SUBMIT" value="提交">	
+		</FORM><br>
+
+		<a href="cgi-bin/dev_check.cgi"><h4>已填写设备信息查询</h4> </a>
+
+
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>串口设置与查询</title>
+	</head>
+	<body > 
+		<h3>串口参数设置</h3><p></p>
+		<FORM action="cgi-bin/com_set.cgi" method="post" >
+			<h4>串口号&nbsp&nbsp&nbsp&nbsp :			
+				<SELECT name="com_num">		
+					<option value="com1"selected = "selected">com1</option>
+					<option value="com2">com2</option>
+					<option value="com3">com3</option>
+					<option value="com4">com4</option>
+				</SELECT> 
+			</h4>	<p></p>
+			<h4>数据位&nbsp&nbsp&nbsp&nbsp :			
+				<SELECT name="databit">		
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8" selected = "selected">8</option>
+				</SELECT> 
+			</h4>	<p></p>
+			<h4>奇偶校验位:
+				<SELECT name="paritybit">		
+					<option value="N" selected = "selected">无校验</option>
+					<option value="O">奇校验</option>
+                    <option value="E">偶校验</option>
+				</SELECT> 
+			</h4><p></p>
+			<h4>停止位&nbsp&nbsp&nbsp&nbsp :
+				<SELECT name="stopbit">		
+					<option value="1" selected = "selected">1</option>
+					<option value="2">2</option>
+				</SELECT> 
+			</h4><p></p>
+			<h4>波特率&nbsp&nbsp&nbsp&nbsp :
+				<SELECT name="baudrate">
+                    <option value="300">300</option>
+					<option value="600">600</option>
+					<option value="1200">1200</option>
+                    <option value="2400">2400</option>
+					<option value="4800">4800</option>
+					<option value="9600">9600</option>
+					<option value="19200">19200</option>
+					<option value="38400">38400</option>
+					<option value="57600">57600</option>
+					<option value="115200" selected = "selected">115200</option>
+				</SELECT> 
+			</h4><p></p>
+            
+               <h4>外接设备&nbsp&nbsp:
+				<SELECT name="device">
+                    <option value="无"style="selected">无</option>
+					<option value="能见度">能见度</option>
+					<option value="气象站">气象站</option>
+                    <option value="路感">路感</option>
+				</SELECT> 
+			</h4><p></p>
+
+			<INPUT type="SUBMIT" value="设置">	
+		</FORM>
+	</body>
+	<html>

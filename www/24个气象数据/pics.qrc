@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>pics.qrc</file>
+        <file>1.png</file>
+        <file>4.png</file>
+        <file>3.png</file>
+        <file>2.png</file>
+        <file>降雨持续时间.png</file>
+        <file>路感设备状态.png</file>
+        <file>路况.png</file>
+        <file>路面摩擦系数.png</file>
+        <file>路面温度.png</file>
+        <file>能见度设备状态.png</file>
+        <file>5.png</file>
+        <file>日降雨量.png</file>
+        <file>水膜厚度.png</file>
+        <file>天气.png</file>
+        <file>雪膜厚度.png</file>
+        <file>雨量强度.png</file>
+        <file>雨强最大值.png</file>
+        <file>最小风速 平均风速 最大风速.png</file>
+        <file>最小风向 平均风向 最大风向.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>设备设置与查询</title>
+	</head>
+	<body>
+				<FORM action="cgi-bin/dev_set.cgi" method="post" >
+
+			<!--	<h4>设备数量：<input type="text"name="dev_num" size="1"
+					onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"maxlength="2"/>
+					(如有10个设备填写10)
+					<p></p><br> -->
+
+				   <h3>外接设备设置</h3><p></p>
+					 <h4>  设备 ID &nbsp&nbsp：
+					<SELECT name="dev_id">	
+						<option value="1"selected = "selected">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>			
+					</SELECT> 
+					(ID按顺序填写，如有10个设备，ID为1-10)
+
+					<p></p><br>
+					设备类型：
+					<SELECT name="dev_type">	
+						<option value="相机"selected = "selected">相机</option>
+						<option value="终端服务器">终端服务器</option>
+						<option value="补光灯">补光灯</option>
+						<option value="机柜">机柜</option>
+						<option value="能见度">能见度</option>
+						<option value="路感">路感</option>
+						<option value="气象站">气象站</option>
+					</SELECT> <p></p><br>
+
+					设备方向：
+					<SELECT name="dev_dir">	
+						<option value="东"selected = "selected">东</option>
+						<option value="南">南</option>
+						<option value="西">西</option>
+						<option value="北">北</option>
+					</SELECT> <p></p><br>
+
+					设备 IP&nbsp&nbsp：<input type="text"name="dev_ip" size="15" value="" onkeyup="this.value=value.replace(/[^\d|.]/g,'');if(this.value=='')(this.value='');">
+					(没有ip设备 不填这项)
+					<p></p><br>
+						<INPUT type="SUBMIT" value="设置"></h4>	
+		</FORM>
+		<br>
+		<a href="./cgi-bin/dev_query.cgi">已设置设备信息查询</a>
+		<p></p><p></p>
+		<a href="./cgi-bin/dev_sendto_st.cgi">完成</a>(所有外接设备都设置完点击此按钮)
+		<p></p>
+		如：有10个外接设备 ID 1-10都设置完 确认无误点击此按钮，保存10个外接设备信息
+			</body>
+</html>

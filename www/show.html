@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<title>显示界面</title>
+       <style> 
+         a{ text-decoration:none} 
+       </style> 
+	 <script>
+          function test(x){
+			  document.getElementById(x).style.background="red";
+		    
+			  for(var i = 1;i<6;i++){
+			   if (i != x)
+                    document.getElementById(i).style.background="black";
+			  }
+		  }
+
+          function getCookie(name)  //取cookies函数        
+	{
+		document.getElementById(1).style.background="red";
+		var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+		if(arr != null) {
+			//		alert(unescape(arr[2]));
+			return unescape(arr[2]);
+		}
+		location.href="/index.html";
+		return null;
+	}
+     </script>
+	</head>    
+
+	<body onLoad="getCookie('username')" >
+			<table    width=100% border="0" style="background:black">
+			<tr height=30px  width=100% >
+				<td width=100> </td>
+				<td width=100><a href="cgi-bin/realdata.cgi" id="1" onclick="test(1)" target="iframe"><font
+				color="white">实时数据</font></a></td>
+				<td width=100><a href="his_data_query.html" id="2" onclick="test(2)" target="iframe"><font
+				color="white">历史数据查询</font></a></td>
+				<td width=100><a href="par_set_check.html" id="3" onclick="test(3)" target="iframe"><FONT
+				color="white">下位机设置</FONT></a></td>
+				<td width=60> </td>
+			</tr>
+		</table><p></p>	
+
+		<table width=100% height=100%>
+			<tr >
+				<iframe src="cgi-bin/realdata.cgi" height=1000 width=100%
+					frameborder=0 name="iframe"></iframe> 
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head> 
+	  <meta charset="UTF-8">
+	  <title>参数设置与查询 </title>
+	  <style>
+                	
+	  </style>
+	  <script>
+       var t=1;
+       function test(x){
+    	<!-- 这个是判断第一次点击 -->
+		if(x==1&&t==1){
+			document.getElementById(x).style.background="green";
+		}
+		<!-- 这个判断是防止重复点击 -->
+		else if(x!=t){		
+			document.getElementById(x).style.font="green";
+			document.getElementById(t).style.font="red";
+		}
+	t=x;
+}
+</script>
+  </head>
+
+
+<script type="text/javascript"> 
+ 
+    	 
+function getCookie(name)  //取cookies函数        
+{
+	var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+	if(arr != null) {
+//		alert(unescape(arr[2]));
+		return unescape(arr[2]);
+	}
+	location.href="/index.html";
+	return null;
+
+}
+</script>
+  <body onLoad="getCookie('username')"  style="margin:0" background="./images/main3.jpg">
+	  <table style="width:100%;height:500px;">
+		  <tr style="height:5%;"><td colspan="2" align="middle" style=""><h3>参数设置与查询</h3></td> </tr>
+		  <tr style="width:100%;height:450px;">
+			  <td style="width:40%;height:400px">
+				  <ul style="list-style-type:none;height:20%">
+					  <li> <a class="acss" id="1" href="com_set.html" target="myframe"  onclick="test(1)"><h4>串口参数设置</h4></a></li>
+				  </ul>
+				  <ul style="list-style-type:none;height:20%">
+					  <li><a class="acss" id="2" href="net_set.html" target="myframe"  onclick="test(2)"><h4>网口参数设置与查询</h4></a></li>
+				  </ul>
+				  <ul style="list-style-type:none;height:20%">
+					  <li><a class="acss" id="3" href="time_set.html" target="myframe"  onclick="test(3)"><h4>时间设置与查询</h4></a></li>
+				  </ul>
+                  <ul style="list-style-type:none;height:20%">
+					  <li><a class="acss" id="4" href="upload_file.html" target="myframe"  onclick="test(4)"><h4>上传文件与系统更新</h4></a></li>
+				  </ul>
+			  </td> 
+			  <td >
+			    <iframe src="com_set.html" style="width:100%;height:400px;" frameborder=0  align="center" name="myframe" ></iframe>
+			  </td>
+
+		  </tr>
+		  
+	  </table>
+  </body>
+
+  </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>时间设置与查询</title>
+	</head>
+	<body > 
+		<h3>时间设置</h3><p></p>
+		<FORM action="cgi-bin/time_set.cgi" method="post" autofocus>
+			<h4>日期: <input type="date" name="date"> 格式: 2001/03/05 &nbsp&nbsp&nbsp
+				年/月/日 </h4><p></p>           
+			<h4>时间: <input type="time" name="time"> 格式: 09:08:07 &nbsp&nbsp&nbsp
+				时:分:秒</h4><p></p>
+			<INPUT type="SUBMIT" value="设置">	
+		</FORM><br>
+		<a href="cgi-bin/time_check.cgi"><h4>查询设备时间</h4> </a>
+	</body>
+	<html>

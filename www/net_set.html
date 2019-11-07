@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>网口设置与查询</title>
+	</head>
+	<body > 
+		<h3>网口参数设置</h3><p></p>
+		<FORM action="cgi-bin/net_set.cgi" method="post" >
+			<h4>i p &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <input type="text"
+				name="ip" size="15" onkeyup="this.value=value.replace(/[^\d|.]/g,'');if(this.value=='')(this.value='');"autofocus>	</h4><p></p>
+			<h4>netmask:<input type="text" name="netmask" size="15" value='255.255.255.0'
+				onkeyup="this.value=value.replace(/[^\d|.]/g,'');if(this.value=='')(this.value='');"></h4><p></p>
+			<h4>gateway:<input type="text" name="gateway" size="15"
+				onkeyup="this.value=value.replace(/[^\d|.]/g,'');if(this.value=='')(this.value='');"></h4><p></p>            
+			<INPUT type="SUBMIT" value="设置">	
+		</FORM><br>
+		<a href="cgi-bin/net_check.cgi"><h4>网络参数查询</h4> </a>
+	</body>
+	<html>

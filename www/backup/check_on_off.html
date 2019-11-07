@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>检查设备功能开启与关闭</title>
+	</head>
+	<body>
+		<FORM action="cgi-bin/dev_func.cgi" method="post" >
+			<h4>四路电源检测方向勿重复</h4>
+			第一路电源检测:
+				<input type="radio" name="adc_check_1" value="1"checked="checked"> 开启 
+				<input type="radio" name="adc_check_1" value="0" >关闭  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			第一路电源检测方向:
+			<SELECT name="adc_check_1_dir">		
+				<option value="东"selected = "selected">东</option>
+				<option value="南">南</option>
+				<option value="西">西</option>
+				<option value="北">北</option>
+			</SELECT> 
+			<p></p>
+			第二路电源检测:
+				<input type="radio" name="adc_check_2" value="1"checked="checked"> 开启
+				<input type="radio" name="adc_check_2" value="0" >关闭     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+				第二路电源检测方向:
+				<SELECT name="adc_check_2_dir">		
+					<option value="东">东</option>
+					<option value="南"selected = "selected">南</option>
+					<option value="西">西</option>
+					<option value="北">北</option>
+				</SELECT> 
+				<p></p>
+
+			第三路电源检测:
+				<input type="radio" name="adc_check_3" value="1"checked="checked"> 开启
+				<input type="radio" name="adc_check_3" value="0" >关闭   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+				第三路电源检测方向:
+				<SELECT name="adc_check_3_dir">		
+					<option value="东">东</option>
+					<option value="南">南</option>
+					<option value="西"selected = "selected">西</option>
+					<option value="北">北</option>
+				</SELECT> 
+				<p></p>
+
+			第四路电源检测:
+				<input type="radio" name="adc_check_4" value="1"checked="checked"> 开启
+				<input type="radio" name="adc_check_4" value="0" >关闭    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			第四路电源检测方向:
+				<SELECT name="adc_check_4_dir">		
+					<option value="东">东</option>
+					<option value="南">南</option>
+					<option value="西">西</option>
+					<option value="北"selected = "selected">北</option>
+				</SELECT> 
+				<p></p>
+
+			机柜前门检测:
+				<input type="radio" name="front_door" value="1"checked="checked">开启
+				<input type="radio" name="front_door" value="0">关闭     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			机柜后门检测:
+				<input type="radio" name="back_door" value="1"checked="checked">开启
+				<input type="radio" name="back_door" value="0">关闭<p></p>
+			
+			终端服务器220V检测: 
+				<input type="radio" name="ter_ser_220v_check" value="1"checked="checked">开启
+				<input type="radio" name="ter_ser_220v_check" value="0" >关闭&nbsp&nbsp&nbsp
+
+	        机柜涉水检测: 
+				<input type="radio" name="cabinet_water" value="1"checked="checked">开启
+				<input type="radio" name="cabinet_water" value="0" >关闭<p></p>
+
+			机柜撞击检测: 
+				<input type="radio" name="cabinet_hit" value="1"checked="checked">开启
+				<input type="radio" name="cabinet_hit" value="0" >关闭  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			机柜风扇检测: 
+				<input type="radio" name="cabinet_fan" value="1">开启
+				<input type="radio" name="cabinet_fan" value="0" checked="checked">关闭<p></p>
+
+			机柜加热器检测: 
+				<input type="radio" name="cabinet_heat" value="1">开启
+				<input type="radio" name="cabinet_heat" value="0"checked="checked">关闭  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			拨打电话是否开启: 
+				<input type="radio" name="phone_func" value="1">开启
+				<input type="radio" name="phone_func" value="0" checked="checked">关闭<p></p>
+			气象站是否开启: 
+				<input type="radio" name="weather_station" value="1"checked="checked">开启
+				<input type="radio" name="weather_station" value="0" >关闭  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			能见度是否开启: 
+				<input type="radio" name="visibility" value="1"checked="checked">开启
+				<input type="radio" name="visibility" value="0" >关闭<p></p>
+			路感是否开启: 
+				<input type="radio" name="road_sense" value="1"checked="checked">开启
+				<input type="radio" name="road_sense" value="0" >关闭<p></p>
+            风扇启动温度设定：
+				<input type="TEXT" name=fan_rotate_temp	value="0" size="1"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			加热器启动温度设定：
+				<input type="TEXT" name=heater_heat_temp value="0" size="1"><p></p>
+
+
+			<INPUT type="SUBMIT" value="设置">
+		</FORM>
+		<br><br>
+		<a href="./cgi-bin/dev_func.cgi">已设置功能查询</a>
+	</body>
+</html>

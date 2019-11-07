@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>历史数据查询 </title>
+		<style>
+			a{ text-decoration:none}
+		</style>    
+	</head>  
+	<body> 
+
+		<FORM action="cgi-bin/db_query.cgi" method="post" autofocus>
+			<h3>时间查询</h3><p></p>
+			<h4>选择起始日期: <input type="TEXT" name="st_date"> 格式:
+				2001/03/05(可不填)</h4><p></p>           
+			<h4>选择起始时间: <input type="text" name="st_time"> 格式:
+				09:08:07(可不填)</h4>
+			<h4>选择终止日期: <input type="TEXT" name="end_date">
+			(可不填，默认到现在)</h4><p></p>           
+			<h4>选择终止时间: <input type="text" name="end_time">
+				(可不填)</h4><br>
+
+			<h3>设备查询</h3>
+			<SELECT name="device">		
+				<option value="所有设备" selected = "selected">所有设备</option>
+				<option value="相机">相机</option>
+				<option value="终端服务器">终端服务器</option>
+				<option value="补光灯">补光灯</option>
+				<option value="能见度">能见度</option>
+				<option value="路感">路感</option>
+				<option value="气象站">气象站</option>
+				<option value="机柜">机柜</option>
+			</SELECT><br><br>
+
+			<h4>设备ID查询 <p></p><input type="text"name="dev_id" size="2"
+		    	onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"maxlength="2"/>
+			（输入设备ID号）</h4>
+			<br><br><br>
+
+			<INPUT type="SUBMIT" value="查询">
+		</FORM><br>
+
+
+
+
+		<a href="cgi-bin/net_dbdownload.cgi" target="_blank"><h3><FONT
+					color="blue">全部数据下载</FONT></h3></a>
+
+	
+	</body>
+</html>

@@ -1,0 +1,32 @@
+CTYPE html>
+<html>
+	<head>
+<style>
+body
+.acss{background-color:black;color:white;}
+</style>
+<script>
+var t=1;
+function test(x){
+	<!-- 这个是判断第一次点击 -->
+		if(x==1&&t==1){
+			document.getElementById(x).style.background="blue";
+		}
+	<!-- 这个判断是防止重复点击 -->
+		else if(x!=t){
+			document.getElementById(x).style.background="blue";
+			document.getElementById(t).style.background="black";
+		}
+	t=x;
+}
+</script>
+</head>
+	<body>
+		<a class="acss" id="1" href="#" onclick="test(1)">第一集</a>
+		<a class="acss" id="2" href="#1" onclick="test(2)">第二集</a>
+		<a class="acss" id="3" href="#2" onclick="test(3)">第三集</a>
+		<a class="acss" id="4" href="#3" onclick="test(4)">第四集</a>
+		<a class="acss" id="5" href="#4" onclick="test(5)">第五集</a>
+	</body>
+</html>
+

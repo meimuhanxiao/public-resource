@@ -1,0 +1,11 @@
+网络设置 netpar.html
+
+网络参数查询 调netquery.cgi 通过管道向应用程序提出获取stm32网络地址请求
+应用程序获取到参数返回给netqurey.cgi 并保存数据到sd卡里的数据库
+
+网络参数设置 调netset.cgi   通过管道向应用程序提出设置stm32网络地址请求
+
+历史记录查询 调 net_dbcheck.cgi 将数据库里netaddr表单里数据转为html格式并在页面显示出来
+
+数据下载 调  net_dbdownload.cgi
+将数据库里netaddr表单里数据转为csv格式,通过浏览器下载到用户本地

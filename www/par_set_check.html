@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+ <head> 
+		<meta charset="UTF-8">
+		<title>参数设置与查询 </title>
+		<style>
+a{ text-decoration:none}
+        </style>                 
+    <script> 
+		function test(x){
+			document.getElementById(x).style.background="#EBD3E8";
+
+			for(var i = 1;i<8;i++){
+				if (i != x)
+					document.getElementById(i).style.background=" ";
+			}
+		}
+
+		function func()        
+		{
+			document.getElementById(1).style.background="#EBD3E8";
+		}
+
+	</script>
+  </head>
+
+	<body onload="func()"   style="margin:0"  >
+
+		<table style="width:100%;height:30px;">
+			<tr style="height:30px;" align="middle"><h3>参数设置与查询</h3> </tr>
+		</table>
+
+		<table style="width:100%;height:800px;">
+			<tr style="width:100%;height:800px;">
+
+				<td style="width:40%;"valign=top>
+						<ul style="list-style-type:none;height:50px;">
+							<li> <a href="cgi-bin/com_show.cgi" id="1" onclick="test(1)" target="myframe">
+									<font color="black">串口参数设置</font></a></li>
+						</ul>
+
+						<ul style="list-style-type:none;height:50px;">
+							<li><a  id="2" href="net_set.html" target="myframe"  onclick="test(2)">
+									<font color="black">网口参数设置与查询</font></a></li>
+						</ul>
+
+						<ul style="list-style-type:none;height:50px;">
+							<li><a  id="3" href="cgi-bin/time_show.cgi" target="myframe"  onclick="test(3)">
+									<font color="black">时间设置与查询</font></a></li>
+						</ul>
+
+						<ul style="list-style-type:none;height:50px;">
+							<li><a  id="4" href="cgi-bin/phonenum_show.cgi" target="myframe" onclick="test(4)">
+									<font color="black">电话号码设置</font></a></li>
+						</ul>
+
+						<ul style="list-style-type:none;height:50px;">
+							<li><a  id="5" href="dev_set.html" target="myframe"
+										  onclick="test(5)">
+									<font color="black">外接设备设置与查询</font></a></li>
+						</ul>
+
+			            <ul style="list-style-type:none;height:50px;">
+							<li><a  id="7" href="cgi-bin/dev_func_show.cgi" target="myframe"
+										  onclick="test(7)">
+									<font color="black">设备功能开启与关闭</font></a></li>
+						</ul>
+			
+
+						<ul style="list-style-type:none;height:50px;">
+							<li><a id="6" href="upload_file.html" target="myframe"
+											 onclick="test(6)">
+									<font color="black">上传文件与系统更新</font></a></li>
+						</ul>
+				</td> 
+
+				<td style="width:60%;">
+						<iframe src="cgi-bin/com_show.cgi" style="width:100%;height:800px;" frameborder=0  align="center" name="myframe" ></iframe>
+				</td>
+
+			</tr>
+
+		</table>
+	</body>
+
+</html>

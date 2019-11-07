@@ -1,0 +1,33 @@
+<html lang="zh-cn">
+	<head> 
+		<meta charset="UTF-8">
+		<title>电话号码设置与查询</title>
+	</head>
+	<body > 
+		<h3>电话号码设置与查询</h3><p></p>
+		<FORM action="cgi-bin/phonenum_set.cgi" method="post" >
+			<h4>电话号码1: <input type="text"name="phonenum1" size="15" value=""
+	onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"
+	placeholder="11位手机号码" maxlength="11" autofocus/></h4><p></p>
+
+			<h4>电话号码2: <input type="text" name="phonenum2" size="15" 
+	onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"
+	placeholder="11位手机号码" maxlength="11" /></h4><p></p>
+
+            <h4>电话号码3: <input type="text" name="phonenum3" size="15" 
+	onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"
+	placeholder="11位手机号码" maxlength="11" /></h4><p></p>
+
+            <h4>电话号码4: <input type="text" name="phonenum4" size="15" 
+	onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"
+	placeholder="11位手机号码" maxlength="11" /></h4><p></p>
+
+            <h4>电话号码5: <input type="text" name="phonenum5" size="15" 
+	onkeyup="this.value=value.replace(/[^\d]/g,'');if(this.value=='')(this.value='');"
+	placeholder="11位手机号码" maxlength="11" /></h4><p></p>
+
+			<INPUT type="SUBMIT" value="设置">	
+		</FORM><br>
+		<a href="cgi-bin/net_check.cgi"><h4>已存电话号码查询</h4> </a>
+	</body>
+	<html>

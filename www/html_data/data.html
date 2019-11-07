@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head> 
+	  <meta charset="UTF-8">
+    <title>表格</title>
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="datatables/dataTables.bootstrap.css"> 
+    <link rel="stylesheet" href="datatables/extensions/Select/css/select.bootstrap.css">
+    
+    <!-- <style>
+    TD{
+      text-align: center;
+    }
+    </style> -->
+  </head>
+  <body style="padding: 20px">
+	  <table width="100%" id="myTable">
+        <thead>
+<TR>
+<TH><b>设备ID</b></TH>
+<TH><b>事件序号</b></TH>
+<TH><b>事件时间</b></TH>
+<TH><b>事件对象</b></TH>
+<TH><b>事件类型</b></TH>
+<TH><b>设备方向</b></TH>
+
+</TR>
+</thead>
+<tbody>
+<TR><TD>00000004</TD>
+<TD>1</TD>
+<TD>2019/08/16-10:19:20</TD>
+<TD>气象站</TD>
+<TD>设备在线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>4</TD>
+<TD>2</TD>
+<TD>2019/08/16-10:56:47</TD>
+<TD>气象站</TD>
+<TD>设备在线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>3</TD>
+<TD>2019/08/16-11:38:53</TD>
+<TD>能见度</TD>
+<TD>设备在线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>6</TD>
+<TD>4</TD>
+<TD>2019/08/16-11:38:53</TD>
+<TD>路感</TD>
+<TD>设备在线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>1</TD>
+<TD>5</TD>
+<TD>2019/08/16-11:49:06</TD>
+<TD>终端服务器</TD>
+<TD></TD>
+<TD>东</TD>
+</TR>
+<TR><TD>3</TD>
+<TD>6</TD>
+<TD>2019/08/16-11:49:06</TD>
+<TD>机柜</TD>
+<TD>前门锁开</TD>
+<TD>无</TD>
+</TR>
+<TR><TD>3</TD>
+<TD>7</TD>
+<TD>2019/08/16-11:49:06</TD>
+<TD>机柜</TD>
+<TD>后门锁开</TD>
+<TD>无</TD>
+</TR>
+<TR><TD>3</TD>
+<TD>8</TD>
+<TD>2019/08/16-11:49:06</TD>
+<TD>机柜</TD>
+<TD>设备进水</TD>
+<TD>无</TD>
+</TR>
+<TR><TD>3</TD>
+<TD>9</TD>
+<TD>2019/08/16-11:49:06</TD>
+<TD>机柜</TD>
+<TD>风扇开</TD>
+<TD>无</TD>
+</TR>
+<TR><TD>3</TD>
+<TD>10</TD>
+<TD>2019/08/16-11:49:06</TD>
+<TD>机柜</TD>
+<TD>加热器开</TD>
+<TD>无</TD>
+</TR>
+<TR><TD>1</TD>
+<TD>14</TD>
+<TD>2019/08/21-14:31:31</TD>
+<TD>补光灯</TD>
+<TD></TD>
+<TD>东</TD>
+</TR>
+<TR><TD>1</TD>
+<TD>15</TD>
+<TD>2019/08/21-14:43:04</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>1</TD>
+<TD>16</TD>
+<TD>2019/08/21-15:24:47</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>1</TD>
+<TD>17</TD>
+<TD>2019/08/21-15:45:52</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>1</TD>
+<TD>18</TD>
+<TD>2019/08/21-16:26:51</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>东</TD>
+</TR>
+<TR><TD>1</TD>
+<TD>19</TD>
+<TD>2019/08/21-16:38:15</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>东</TD>
+</TR>
+<TR><TD>00000005</TD>
+<TD>20</TD>
+<TD>2019/08/23-10:18:45</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>21</TD>
+<TD>2019/08/23-11:02:21</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>22</TD>
+<TD>2019/08/23-11:29:33</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>23</TD>
+<TD>2019/08/23-13:42:34</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>24</TD>
+<TD>2019/08/23-13:57:26</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>25</TD>
+<TD>2019/08/23-14:24:05</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>27</TD>
+<TD>2019/08/23-17:09:14</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>28</TD>
+<TD>2019/08/23-17:11:27</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>29</TD>
+<TD>2019/08/23-17:16:28</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>30</TD>
+<TD>2019/08/26-11:29:32</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>31</TD>
+<TD>2019/08/26-11:36:34</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>32</TD>
+<TD>2019/08/26-12:01:48</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>33</TD>
+<TD>2019/08/26-12:03:11</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>34</TD>
+<TD>2019/08/26-13:50:28</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>35</TD>
+<TD>2019/08/26-14:00:01</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>36</TD>
+<TD>2019/08/26-14:44:15</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>37</TD>
+<TD>2019/08/26-14:45:25</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>38</TD>
+<TD>2019/08/26-14:55:22</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>39</TD>
+<TD>2019/08/26-15:01:50</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>40</TD>
+<TD>2019/08/26-15:20:37</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>41</TD>
+<TD>2019/08/26-15:22:12</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>42</TD>
+<TD>2019/08/26-15:24:41</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>43</TD>
+<TD>2019/08/26-15:25:39</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>44</TD>
+<TD>2019/08/26-15:30:04</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>45</TD>
+<TD>2019/08/26-15:31:39</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>46</TD>
+<TD>2019/08/26-15:56:15</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>47</TD>
+<TD>2019/08/26-16:00:36</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>48</TD>
+<TD>2019/08/26-16:12:51</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>49</TD>
+<TD>2019/08/26-16:14:13</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>50</TD>
+<TD>2019/08/26-16:33:40</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>51</TD>
+<TD>2019/08/26-16:38:41</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>52</TD>
+<TD>2019/08/26-16:41:05</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>5</TD>
+<TD>53</TD>
+<TD>2019/08/26-16:42:03</TD>
+<TD>相机</TD>
+<TD>网络在线</TD>
+<TD>南</TD>
+</TR>
+<TR><TD>4</TD>
+<TD>54</TD>
+<TD>2019/08/26-17:26:32</TD>
+<TD>气象站</TD>
+<TD>设备离线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>4</TD>
+<TD>55</TD>
+<TD>2019/08/26-17:35:36</TD>
+<TD>气象站</TD>
+<TD>设备在线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>4</TD>
+<TD>56</TD>
+<TD>2019/08/27-08:37:10</TD>
+<TD>气象站</TD>
+<TD>设备离线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>4</TD>
+<TD>57</TD>
+<TD>2019/08/27-08:50:14</TD>
+<TD>气象站</TD>
+<TD>设备在线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>4</TD>
+<TD>58</TD>
+<TD>2019/08/27-09:19:09</TD>
+<TD>气象站</TD>
+<TD>设备离线</TD>
+<TD>西</TD>
+</TR>
+<TR><TD>1</TD>
+<TD>59</TD>
+<TD>2019/08/27-09:33:01</TD>
+<TD>相机</TD>
+<TD>网络离线</TD>
+<TD>东</TD>
+</TR>
+<TR><TD>4</TD>
+<TD>61</TD>
+<TD>2019/08/27-11:18:31</TD>
+<TD>气象站</TD>
+<TD>设备在线</TD>
+<TD>西</TD>
+</TR>
+</tbody></table> <br> <a href=../his_data_query.html><b>返回</b></a>
+<script src="jquery-1.11.1.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<!-- <script src="data.js"></script> -->
+<script src="datatables/jquery.dataTables.min.js"></script>
+<script src="datatables/dataTables.bootstrap.min.js"></script> 
+<script src="datatables/extensions/Select/js/dataTables.select.min.js"></script>
+<script>
+  $(document).ready(function(){
+        $('#myTable').DataTable({
+            "order": 2
+        });
+    });
+
+
+    $.fn.dataTable.defaults.oLanguage = {
+    "sProcessing": "处理中...",
+    "sLengthMenu": "显示 _MENU_ 项结果",
+    "sZeroRecords": "没有匹配结果",
+    "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+    "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+    "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+    "sInfoPostFix": "",
+    "sSearch": "搜索：",
+    "sUrl": "",
+    "sEmptyTable": "表中数据为空",
+    "sLoadingRecords": "载入中...",
+    "sInfoThousands": ",",
+    "oPaginate": {
+        "sFirst": "首页",
+        "sPrevious": "上页",
+        "sNext": "下页",
+        "sLast": "末页"
+    },
+    "oAria": {
+        "sSortAscending": ": 以升序排列此列",
+        "sSortDescending": ": 以降序排列此列"
+    }
+};
+</script>
+</body>

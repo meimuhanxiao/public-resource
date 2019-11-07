@@ -1,0 +1,2 @@
+par_set_check.html 中的串口参数设置 调com_set.html com_set.html 再调com_set.cgi
+把输入的参数设置到相应的com
